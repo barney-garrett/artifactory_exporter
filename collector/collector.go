@@ -134,11 +134,13 @@ func (e *Exporter) scrape(ch chan<- prometheus.Metric) (up float64) {
 				}
 			}
 		}
-		err = e.exportReplications(ch)
-		if err != nil {
-			return 0
-		}
+		//err = e.exportReplications(ch)
+		//if err != nil {
+		//	return 0
+		//}
 	}
+
+
 
 	// Collect and export system metrics
 	err = e.exportSystem(license, ch)
